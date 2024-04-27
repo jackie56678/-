@@ -16,10 +16,17 @@ Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN�
 3.  xxxx
 
 #### 使用说明
+```
+docker run -it --rm --name ssadmin-maven \
+    -v ssadmin-maven-repo:/root/.m2 \
+    -v "$PWD/src/backend":/usr/src/mymaven \
+    -w /usr/src/mymaven \
+    jack666ie/javamaven:21396 mvn clean install package -e -Dmaven.test.skip=true
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```
+docker compose up -d
+```
 
 #### 参与贡献
 
